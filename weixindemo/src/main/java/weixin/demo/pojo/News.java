@@ -12,8 +12,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class News {
-    private String title;
-    private String description;
-    private String picUrl;
-    private String url;
+    private String Title;
+    private String Description;
+    private String PicUrl;
+    private String Url;
 }

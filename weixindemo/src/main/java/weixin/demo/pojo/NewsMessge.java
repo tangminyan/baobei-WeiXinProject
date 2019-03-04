@@ -14,6 +14,6 @@ import java.util.List;
 @Setter
 @Getter
 public class NewsMessge extends BaseMessage {
-    private int articleCount;
-    private List<News> articles;
+    private int ArticleCount;
+    private List<News> Articles;
 }

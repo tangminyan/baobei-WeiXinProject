@@ -33,6 +33,8 @@ public class MessageUtil {
 
     public static final String MESSAGE_LOCATION = "location";
 
+    public static final String MESSAGE_NEWS = "news";
+
     public static final String MESSAGE_EVENT = "event";
 
     public static final String MESSAGE_SUBSCRIBE = "subscribe";
@@ -80,7 +82,7 @@ public class MessageUtil {
     public static String newsMessageToXml(NewsMessge newsMessge) {
         XStream xs = new XStream();
         xs.alias("xml", newsMessge.getClass());
-        xs.alias("title", new News().getClass());
+        xs.alias("item", new News().getClass());
         return xs.toXML(newsMessge);
     }
 
@@ -90,9 +92,10 @@ public class MessageUtil {
      */
     public static String menuText() {
         StringBuffer sb = new StringBuffer();
-        sb.append("欢迎关注史上最可爱的小贝贝~~~请选择：");
-        sb.append("1、小贝贝真可爱\n\n");
-        sb.append("2、小贝贝最可爱\n\n");
+        sb.append("欢迎关注史上最可爱的汤汤~~~请选择：");
+        sb.append("1、小汤汤真可爱\n\n");
+        sb.append("2、小汤汤最可爱\n\n");
+        sb.append("3、获取专区信息\n\n");
         sb.append("回复 ? 调出主菜单");
         return sb.toString();
     }
@@ -108,12 +111,12 @@ public class MessageUtil {
     }
 
     public static String initNewsMessage(String fromUserName, String toUserName) {
-        List<News> newsList = new ArrayList<News>();
+        List<News> newsList = new ArrayList<>();
         NewsMessge newsMessage = new NewsMessge();
         //组建一条图文↓ ↓ ↓
         News newsItem = new News();
-        newsItem.setTitle("欢迎来到小贝贝专区");
-        newsItem.setDescription("奶萌贝~");
+        newsItem.setTitle("欢迎来到小汤汤专区");
+        newsItem.setDescription("奶萌汤~");
         newsItem.setPicUrl("https://avatars1.githubusercontent.com/u/41277621?s=400&u=6c05d70a4da70d2170d642c547fc1be4c0646790&v=4");
         newsItem.setUrl("avatars1.githubusercontent.com");
         newsList.add(newsItem);
@@ -122,7 +125,7 @@ public class MessageUtil {
         newsMessage.setToUserName(fromUserName);
         newsMessage.setFromUserName(toUserName);
         newsMessage.setCreateTime(new Date().getTime() + "");
-        newsMessage.setMsgType(MESSAGE_VIEW);
+        newsMessage.setMsgType(MESSAGE_NEWS);
         newsMessage.setArticles(newsList);
         newsMessage.setArticleCount(newsList.size());
 

@@ -100,6 +100,7 @@ public class WeiXinServiceImpl implements WeixinService {
             } else {
                 str = MessageUtil.initText(fromUserName, toUserName, "还是:\n"+MessageUtil.menuText());
             }
+            System.out.println(str);
             out.print(str);
         } catch (Exception e) {
             out.print("出错啦出错啦");
