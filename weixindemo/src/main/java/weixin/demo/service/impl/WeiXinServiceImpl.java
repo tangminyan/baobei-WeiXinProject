@@ -29,6 +29,7 @@ public class WeiXinServiceImpl implements WeixinService {
         if(CheckUtil.checkSignature(tooken, signature, timestamp, nonce)) {
             out.print(echostr);
         }
+        out.close();
     }
 
     @Override
@@ -57,7 +58,8 @@ public class WeiXinServiceImpl implements WeixinService {
                 str = MessageUtil.objectToXml(message);
                 out.print(str);
             }
-        } catch (DocumentException e) {
+        } catch (Exception e) {
+            out.print("出错啦出错啦");
             e.printStackTrace();
         } finally {
             out.print("");
@@ -75,26 +77,30 @@ public class WeiXinServiceImpl implements WeixinService {
             Map<String, String> map = MessageUtil.xmlToMap(request);
             String toUserName = map.get("ToUserName");
             String fromUserName = map.get("FromUserName");
-            String createTime = map.get("CreateTime");
             String msgType = map.get("MsgType");
             String content = map.get("Content");
-            String msgId = map.get("MsgId");
             if(MessageUtil.MESSAGE_TEXT.equals(msgType)) {
-                switch (map.get("Content")) {
-                    case "1": str = MessageUtil.initText(toUserName, fromUserName,
+                switch (content) {
+                    case "1": str = MessageUtil.initText(fromUserName, toUserName,
                             "对啊！我也是这么觉得！小贝贝超可爱！");
-                    case "2": str = MessageUtil.initText(toUserName, fromUserName,
-                            "是呢！小贝贝无人能敌！");
-                    default: str = MessageUtil.initText(toUserName, fromUserName,
+                    break;
+                    case "2": str = MessageUtil.initText(fromUserName, toUserName,
+                            "是呢！小贝贝可爱到无人能敌！");
+                    break;
+                    default: str = MessageUtil.initText(fromUserName, toUserName,
                             "不知道你在说啥，反正知道你在夸小贝贝！");
+                    break;
                 }
             } else if (MessageUtil.MESSAGE_EVENT.equals(msgType)) {
                 if(MessageUtil.MESSAGE_SUBSCRIBE.equals(map.get("Event"))) {
-                    str = MessageUtil.initText(toUserName, fromUserName, MessageUtil.menuText());
+                    str = MessageUtil.initText(fromUserName, toUserName, MessageUtil.menuText());
                 }
+            } else {
+                str = MessageUtil.initText(fromUserName, toUserName, "还是:\n"+MessageUtil.menuText());
             }
             out.print(str);
-        } catch (DocumentException e) {
+        } catch (Exception e) {
+            out.print("出错啦出错啦");
             e.printStackTrace();
         } finally {
             out.print("");

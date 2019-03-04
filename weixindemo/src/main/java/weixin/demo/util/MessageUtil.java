@@ -50,7 +50,7 @@ public class MessageUtil {
      * @throws DocumentException
      */
     public static Map<String, String> xmlToMap(HttpServletRequest request) throws IOException, DocumentException {
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<>();
         SAXReader reader = new SAXReader();
         InputStream is = request.getInputStream();
         Document doc = reader.read(is);

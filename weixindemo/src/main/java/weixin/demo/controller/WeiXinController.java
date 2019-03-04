@@ -29,7 +29,9 @@ public class WeiXinController {
 //        WeiXinServlet weiXinServlet = new WeiXinServlet();
 //        weiXinServlet.doGet(tooken, request, response);
 //        weiXinServlet.doPost(request, response);
-        weixinService.getConnect(tooken, request, response);
+//        weixinService.getConnect(tooken, request, response);
+//        weixinService.replayContent(request, response);
+        weixinService.autoAnswer(request, response);
     }
 
     /**
