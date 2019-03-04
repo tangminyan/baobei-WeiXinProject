@@ -5,11 +5,14 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-import weixin.demo.pojo.XmlParam;
+import weixin.demo.pojo.News;
+import weixin.demo.pojo.NewsMessge;
+import weixin.demo.pojo.TextMessage;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -63,10 +66,22 @@ public class MessageUtil {
         return map;
     }
 
-    public static String objectToXml(XmlParam xmlParam) {
+    /**
+     *  text消息转xml
+     * @param param
+     * @return
+     */
+    public static String objectToXml(TextMessage param) {
         XStream xs = new XStream();
-        xs.alias("xml", xmlParam.getClass());
-        return xs.toXML(xmlParam);
+        xs.alias("xml", param.getClass());
+        return xs.toXML(param);
+    }
+
+    public static String newsMessageToXml(NewsMessge newsMessge) {
+        XStream xs = new XStream();
+        xs.alias("xml", newsMessge.getClass());
+        xs.alias("title", new News().getClass());
+        return xs.toXML(newsMessge);
     }
 
     /**
@@ -83,12 +98,35 @@ public class MessageUtil {
     }
 
     public static String initText(String fromUserName, String toUserName, String content) {
-        XmlParam message = new XmlParam();
+        TextMessage message = new TextMessage();
         message.setFromUserName(toUserName);
         message.setToUserName(fromUserName);
         message.setMsgType(MESSAGE_TEXT);
         message.setCreateTime(new Date().getTime()+"");
         message.setContent(content);
         return objectToXml(message);
+    }
+
+    public static String initNewsMessage(String fromUserName, String toUserName) {
+        List<News> newsList = new ArrayList<News>();
+        NewsMessge newsMessage = new NewsMessge();
+        //组建一条图文↓ ↓ ↓
+        News newsItem = new News();
+        newsItem.setTitle("欢迎来到小贝贝专区");
+        newsItem.setDescription("奶萌贝~");
+        newsItem.setPicUrl("https://avatars1.githubusercontent.com/u/41277621?s=400&u=6c05d70a4da70d2170d642c547fc1be4c0646790&v=4");
+        newsItem.setUrl("avatars1.githubusercontent.com");
+        newsList.add(newsItem);
+
+        //组装图文消息相关信息
+        newsMessage.setToUserName(fromUserName);
+        newsMessage.setFromUserName(toUserName);
+        newsMessage.setCreateTime(new Date().getTime() + "");
+        newsMessage.setMsgType(MESSAGE_VIEW);
+        newsMessage.setArticles(newsList);
+        newsMessage.setArticleCount(newsList.size());
+
+        //调用newsMessageToXml将图文消息转化为XML结构并返回
+        return MessageUtil.newsMessageToXml(newsMessage);
     }
 }

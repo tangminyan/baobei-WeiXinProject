@@ -7,11 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class XmlParam {
-    private String ToUserName;
-    private String FromUserName;
-    private String CreateTime;
-    private String MsgType;
+public class TextMessage extends BaseMessage{
     private String Content;
     private String MsgId;
 }

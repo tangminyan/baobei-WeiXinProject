@@ -28,7 +28,7 @@ public class WeiXinServlet {
             String content = map.get("Content");
             String msgId = map.get("MsgId");
             if(MessageUtil.MESSAGE_TEXT.equals(msgType)) {
-                XmlParam message = new XmlParam();
+                TextMessage message = new TextMessage();
                 message.setFromUserName(toUserName);
                 message.setToUserName(fromUserName);
                 message.setMsgType(msgType);

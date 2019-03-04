@@ -2,7 +2,7 @@ package weixin.demo.service.impl;
 
 import org.dom4j.DocumentException;
 import org.springframework.stereotype.Service;
-import weixin.demo.pojo.XmlParam;
+import weixin.demo.pojo.TextMessage;
 import weixin.demo.service.WeixinService;
 import weixin.demo.util.CheckUtil;
 import weixin.demo.util.MessageUtil;
@@ -47,7 +47,7 @@ public class WeiXinServiceImpl implements WeixinService {
             String content = map.get("Content");
             String msgId = map.get("MsgId");
             if(MessageUtil.MESSAGE_TEXT.equals(msgType)) {
-                XmlParam message = new XmlParam();
+                TextMessage message = new TextMessage();
                 message.setFromUserName(toUserName);
                 message.setToUserName(fromUserName);
                 message.setMsgType(msgType);
@@ -86,6 +86,8 @@ public class WeiXinServiceImpl implements WeixinService {
                     break;
                     case "2": str = MessageUtil.initText(fromUserName, toUserName,
                             "是呢！小贝贝可爱到无人能敌！");
+                    break;
+                    case "3": str = MessageUtil.initNewsMessage(fromUserName, toUserName);
                     break;
                     default: str = MessageUtil.initText(fromUserName, toUserName,
                             "不知道你在说啥，反正知道你在夸小贝贝！");
