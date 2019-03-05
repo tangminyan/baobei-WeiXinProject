@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85456d1f-97c0-445c-aa0b-2b5c5bba6191" name="Default" comment="token代码，未配缓存">
-      <change afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/tmp/TestMain.java" afterDir="false" />
+    <list default="true" id="85456d1f-97c0-445c-aa0b-2b5c5bba6191" name="Default" comment="图片消息">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/ImageMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weixin/demo/service/WeixinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/service/WeixinService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/weixin/demo/service/impl/WeiXinServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/service/impl/WeiXinServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weixin/demo/util/MessageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/util/MessageUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/weixin/demo/service/WeixinService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/weixin/demo/service/WeixinService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/weixin/demo/service/impl/WeiXinServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/weixin/demo/service/impl/WeiXinServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/weixin/demo/util/WeiXinUtilTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="MessageUtil.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MessageUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/MessageUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="289">
+              <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,8 +43,8 @@
       <file leaf-file-name="WeiXinServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/service/impl/WeiXinServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
+            <state relative-caret-position="516">
+              <caret line="101" column="41" lean-forward="true" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,7 +56,43 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/controller/WeiXinController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeiXinUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-773">
+              <caret line="105" column="42" lean-forward="true" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/pojo/Image.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/pojo/ImageMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,36 +110,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/tmp/TestMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="572">
+              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#876#877#0" expanded="true" />
                 <element signature="e#898#899#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectMapper.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="1672" column="8" selection-start-line="1672" selection-start-column="8" selection-end-line="1672" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeiXinUtilTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtilTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,8 +138,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -138,6 +149,7 @@
       <find>is.cl</find>
       <find>Content</find>
       <find>xmlpa</find>
+      <find>AccessToken getAccessToken()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,10 +175,8 @@
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/TextMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/News.java" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/NewsMessge.java" />
-        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/util/MessageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/AccessToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/service/WeixinService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtilTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/tmp/Girl.java" />
@@ -175,8 +185,12 @@
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/config/RedisConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/tmp/TestMainTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/service/impl/WeiXinServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/weixin/demo/tmp/TestMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/Image.java" />
+        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/pojo/ImageMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/service/impl/WeiXinServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/weixin/demo/util/MessageUtil.java" />
       </list>
     </option>
   </component>
@@ -197,9 +211,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="833" />
-    <option name="y" value="7" />
-    <option name="width" value="1197" />
+    <option name="x" value="786" />
+    <option name="y" value="24" />
+    <option name="width" value="1321" />
     <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -261,7 +275,78 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="weixin" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="tmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weixin.demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weixindemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="weixin" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -287,13 +372,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="weixin.demo.tmp" />
+      <recent name="weixin.demo.util" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="weixin.demo.util" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -312,7 +400,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestMain.main">
+  <component name="RunManager" selected="Spring Boot.WeixinApplication">
     <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="weixin.demo.tmp.TestMain" />
       <module name="weixin.demo" />
@@ -472,7 +560,7 @@
       <workItem from="1551662239085" duration="249000" />
       <workItem from="1551662759360" duration="2394000" />
       <workItem from="1551676575443" duration="3556000" />
-      <workItem from="1551747679483" duration="8339000" />
+      <workItem from="1551747679483" duration="14024000" />
     </task>
     <task id="LOCAL-00001" summary="token代码，未配缓存">
       <created>1551695887614</created>
@@ -481,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551695887614</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="token代码，未配缓存 2">
+      <created>1551767301840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551767301841</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -517,7 +612,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47292000" />
+    <option name="totallyTimeSpent" value="52977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,7 +639,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" visible="true" weight="0.2527233" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" weight="0.25749168" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936978" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32897604" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -556,10 +651,11 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="CheckStyle" order="7" weight="0.32936978" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2468017" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.35127932" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="BPMNPalette" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -567,7 +663,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
@@ -595,7 +690,8 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22334754" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40721196" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="7" side_tool="true" />
@@ -603,9 +699,8 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" visible="true" weight="0.25749168" />
       <window_info anchor="right" id="Bean Validation" order="10" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946004" weight="0.30576715" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +737,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="token代码，未配缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="token代码，未配缓存" />
+    <MESSAGE value="token代码，未配缓存 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="token代码，未配缓存 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,8 +806,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/enums/MessageType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/enums/EventEnum.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/pojo/TextMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -942,43 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/MessageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="112" column="40" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="1672" column="8" selection-start-line="1672" selection-start-column="8" selection-end-line="1672" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/tmp/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -1028,20 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/service/impl/WeiXinServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/controller/WeiXinController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1052,10 +1099,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/weixin/demo/util/WeiXinUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="1672" column="8" selection-start-line="1672" selection-start-column="8" selection-end-line="1672" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/tmp/TestMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="572">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#876#877#0" expanded="true" />
@@ -1064,12 +1128,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/WeiXinUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-773">
+          <caret line="105" column="42" lean-forward="true" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/pojo/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/pojo/ImageMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/service/impl/WeiXinServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="101" column="41" lean-forward="true" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/weixin/demo/util/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="121" column="26" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>weixin.demo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.1.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

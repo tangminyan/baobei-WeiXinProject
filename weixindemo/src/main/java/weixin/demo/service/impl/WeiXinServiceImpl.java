@@ -91,6 +91,8 @@ public class WeiXinServiceImpl implements WeixinService {
                     break;
                     case "3": str = MessageUtil.initNewsMessage(fromUserName, toUserName);
                     break;
+                    case "4": str = MessageUtil.initImageMessage(fromUserName, toUserName);
+                    break;
                     default: str = MessageUtil.initText(fromUserName, toUserName,
                             "不知道你在说啥，反正知道你在夸小贝贝！");
                     break;
