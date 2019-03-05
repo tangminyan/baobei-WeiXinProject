@@ -9,7 +9,6 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import weixin.demo.pojo.AccessToken;
 
 import java.io.IOException;
 
@@ -19,7 +18,7 @@ import java.io.IOException;
 public class WeiXinUtil {
     private final static String APPID = "wxbb9b0898c6e16633";
     private final static String APPSECRET = "a477c6b2271e1a3841dbd69178be54bc";
-    private final static String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="
+    public final static String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="
             + APPID + "&secret=" + APPSECRET;
 
     public static JSONObject doGetStr(String url) throws IOException {
@@ -44,6 +43,7 @@ public class WeiXinUtil {
         return JSONObject.parseObject(result);
     }
 
+    /*@Cacheable(value = "access_token", key = "token")
     public static AccessToken getAccessToken() throws IOException {
         AccessToken token = new AccessToken();
         String url = ACCESS_TOKEN_URL;
@@ -53,5 +53,5 @@ public class WeiXinUtil {
             token.setExpiresIn(json.getInteger("expires_in"));
         }
         return token;
-    }
+    }*/
 }

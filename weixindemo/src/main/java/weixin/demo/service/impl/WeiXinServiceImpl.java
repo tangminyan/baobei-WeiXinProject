@@ -1,11 +1,13 @@
 package weixin.demo.service.impl;
 
-import org.dom4j.DocumentException;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Service;
+import weixin.demo.pojo.AccessToken;
 import weixin.demo.pojo.TextMessage;
 import weixin.demo.service.WeixinService;
 import weixin.demo.util.CheckUtil;
 import weixin.demo.util.MessageUtil;
+import weixin.demo.util.WeiXinUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -109,5 +111,17 @@ public class WeiXinServiceImpl implements WeixinService {
             out.print("");
             out.close();
         }
+    }
+
+    @Override
+    public AccessToken getAccessToken() throws IOException {
+        AccessToken token = new AccessToken();
+        String url = WeiXinUtil.ACCESS_TOKEN_URL;
+        JSONObject json = WeiXinUtil.doGetStr(url);
+        if(json != null) {
+            token.setToken(json.getString("access_token"));
+            token.setExpiresIn(json.getInteger("expires_in"));
+        }
+        return token;
     }
 }
