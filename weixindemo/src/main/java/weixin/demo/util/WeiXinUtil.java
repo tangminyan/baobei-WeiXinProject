@@ -10,6 +10,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import weixin.demo.pojo.AccessToken;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -32,6 +33,7 @@ public class WeiXinUtil {
     public final static String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="
             + APPID + "&secret=" + APPSECRET;
     private final static String UPLOAD_URL = "https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE";
+    private final static String DOWNLOAD_URL = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID";
 
     public static JSONObject doGetStr(String url) throws IOException {
         CloseableHttpClient client = HttpClientBuilder.create().build();
@@ -55,7 +57,6 @@ public class WeiXinUtil {
         return JSONObject.parseObject(result);
     }
 
-    /*@Cacheable(value = "access_token", key = "token")
     public static AccessToken getAccessToken() throws IOException {
         AccessToken token = new AccessToken();
         String url = ACCESS_TOKEN_URL;
@@ -65,7 +66,7 @@ public class WeiXinUtil {
             token.setExpiresIn(json.getInteger("expires_in"));
         }
         return token;
-    }*/
+    }
 
     public static String upload(String filePath, String accessToken, String type) throws IOException {
         File file = new File(filePath);

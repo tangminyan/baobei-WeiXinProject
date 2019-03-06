@@ -25,6 +25,8 @@ public class MessageUtil {
 
     public static final String MESSAGE_IMAGE = "image";
 
+    public static final String MESSAGE_THUMB = "thumb"; //缩略图
+
     public static final String MESSAGE_VOICE = "voice";
 
     public static final String MESSAGE_VIDEO = "video";
@@ -182,7 +184,11 @@ public class MessageUtil {
     public static String initImageMessage(String fromUserName, String toUserName) {
         String message = null;
         Image img = new Image();
-        img.setMediaId("");
+        img.setMediaId("VUr39RFqZX86cx2wWI9daoGjGDxKIKcLWY7Cgp6-XgZtYMFlw4StT2_TX5h8JOyR");
+        String url = "https://api.weixin.qq.com/cgi-bin/media/get?access_token="+
+                "19_r7zV3tIwrZ5XL7YVtjED7fGpw9AJrAOejX-0qSuQuKCTcf1j-uPNbJHlx4YB7oXVyfzqoeb9uqiTWd0Lhf0aXqTaQqjb_Ef3BHbICrRsk1YFY7s18Dd3RB4ZkuMeJV5PpZsPx7uxLrQrHhPaAJBiAFARAS"
+                +"&media_id=VUr39RFqZX86cx2wWI9daoGjGDxKIKcLWY7Cgp6-XgZtYMFlw4StT2_TX5h8JOyR";
+
         ImageMessage imageMessage = new ImageMessage();
         imageMessage.setFromUserName(toUserName);
         imageMessage.setToUserName(fromUserName);
