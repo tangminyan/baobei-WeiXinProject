@@ -18,6 +18,7 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -33,7 +34,7 @@ public class WeiXinUtil {
     public final static String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="
             + APPID + "&secret=" + APPSECRET;
     private final static String UPLOAD_URL = "https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&type=TYPE";
-    private final static String DOWNLOAD_URL = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID";
+    public final static String DOWNLOAD_URL = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID";
 
     public static JSONObject doGetStr(String url) throws IOException {
         CloseableHttpClient client = HttpClientBuilder.create().build();
@@ -41,7 +42,7 @@ public class WeiXinUtil {
         JSONObject jsonObject = null;
         HttpResponse response = client.execute(httpGet);
         HttpEntity entity = response.getEntity();
-        if(entity != null) {
+        if (entity != null) {
             String result = EntityUtils.toString(entity, "UTF-8");
             jsonObject = JSONObject.parseObject(result);
         }
@@ -61,7 +62,7 @@ public class WeiXinUtil {
         AccessToken token = new AccessToken();
         String url = ACCESS_TOKEN_URL;
         JSONObject json = doGetStr(url);
-        if(json != null) {
+        if (json != null) {
             token.setToken(json.getString("access_token"));
             token.setExpiresIn(json.getInteger("expires_in"));
         }
@@ -70,7 +71,7 @@ public class WeiXinUtil {
 
     public static String upload(String filePath, String accessToken, String type) throws IOException {
         File file = new File(filePath);
-        if(!file.exists() || !file.isFile()) {
+        if (!file.exists() || !file.isFile()) {
             throw new IOException("文件不存在");
         }
         String url = UPLOAD_URL.replace("ACCESS_TOKEN", accessToken).replace("TYPE", type);
@@ -120,17 +121,17 @@ public class WeiXinUtil {
         try {
             reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String line = null;
-            while((line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 buffer.append(line);
             }
-            if(result == null){
+            if (result == null) {
                 result = buffer.toString();
             }
         } catch (IOException e) {
             log.info(e.getMessage());
             e.printStackTrace();
         } finally {
-            if(reader != null) {
+            if (reader != null) {
                 reader.close();
             }
         }
@@ -138,19 +139,49 @@ public class WeiXinUtil {
         JSONObject jsonObject = JSONObject.parseObject(result);
         System.out.println(jsonObject);
         String typeName = "media_id";
-        if(!"image".equals(type)) {
+        if (!"image".equals(type)) {
             typeName = type + "_media_id";
         }
         String mediaId = jsonObject.getString(typeName);
         return mediaId;
     }
 
+    public static String download(String requestUrl) {
+        StringBuffer buffer = new StringBuffer();
+        try {
+            URL url = new URL(requestUrl);
+            HttpURLConnection httpUrlConn = (HttpURLConnection) url.openConnection();
+
+            httpUrlConn.setDoOutput(false);
+            httpUrlConn.setDoInput(true);
+            httpUrlConn.setUseCaches(false);
+
+            httpUrlConn.setRequestMethod("GET");
+            httpUrlConn.connect();
+
+            // 将返回的输入流转换成字符串
+            InputStream inputStream = httpUrlConn.getInputStream();
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "utf-8");
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+            String str = null;
+            while ((str = bufferedReader.readLine()) != null) {
+                buffer.append(str);
+            }
+            bufferedReader.close();
+            inputStreamReader.close();
+            // 释放资源
+            inputStream.close();
+            inputStream = null;
+            httpUrlConn.disconnect();
+
+        } catch (Exception e) {
+        }
+        return buffer.toString();
+    }
+
+
 }
-
-
-
-
-
 
 
 

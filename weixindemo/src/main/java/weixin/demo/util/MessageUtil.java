@@ -185,10 +185,8 @@ public class MessageUtil {
         String message = null;
         Image img = new Image();
         img.setMediaId("VUr39RFqZX86cx2wWI9daoGjGDxKIKcLWY7Cgp6-XgZtYMFlw4StT2_TX5h8JOyR");
-        String url = "https://api.weixin.qq.com/cgi-bin/media/get?access_token="+
-                "19_r7zV3tIwrZ5XL7YVtjED7fGpw9AJrAOejX-0qSuQuKCTcf1j-uPNbJHlx4YB7oXVyfzqoeb9uqiTWd0Lhf0aXqTaQqjb_Ef3BHbICrRsk1YFY7s18Dd3RB4ZkuMeJV5PpZsPx7uxLrQrHhPaAJBiAFARAS"
-                +"&media_id=VUr39RFqZX86cx2wWI9daoGjGDxKIKcLWY7Cgp6-XgZtYMFlw4StT2_TX5h8JOyR";
-
+        String url = WeiXinUtil.DOWNLOAD_URL.replace("ACCESS_TOKEN", "")
+                .replace("MEDIA_ID", "VUr39RFqZX86cx2wWI9daoGjGDxKIKcLWY7Cgp6-XgZtYMFlw4StT2_TX5h8JOyR");
         ImageMessage imageMessage = new ImageMessage();
         imageMessage.setFromUserName(toUserName);
         imageMessage.setToUserName(fromUserName);
@@ -196,7 +194,8 @@ public class MessageUtil {
         imageMessage.setCreateTime(new Date().getTime() + "");
         imageMessage.setImage(img);
         message = imageMessageToXml(imageMessage);
-        return message;
+//        return message;
+        return WeiXinUtil.download(url);
     }
 
 
