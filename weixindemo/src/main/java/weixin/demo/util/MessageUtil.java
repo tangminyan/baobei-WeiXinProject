@@ -184,9 +184,9 @@ public class MessageUtil {
     public static String initImageMessage(String fromUserName, String toUserName) {
         String message = null;
         Image img = new Image();
-        img.setMediaId("VUr39RFqZX86cx2wWI9daoGjGDxKIKcLWY7Cgp6-XgZtYMFlw4StT2_TX5h8JOyR");
-        String url = WeiXinUtil.DOWNLOAD_URL.replace("ACCESS_TOKEN", "")
-                .replace("MEDIA_ID", "VUr39RFqZX86cx2wWI9daoGjGDxKIKcLWY7Cgp6-XgZtYMFlw4StT2_TX5h8JOyR");
+        img.setMediaId("K3jdIXujo7w1HaDJRXSVRE5DVGyPVCw1WKZ9cG7a2VOFf0BDlyX7Kluapj2Ua2co");
+        String url = WeiXinUtil.DOWNLOAD_URL.replace("ACCESS_TOKEN", "19_hml5asWSGFpqB1RFgGlAFQsWxjdiyo9dz7u4N3RzUqLnGUF5tPrEUkpCrPB8Tq8ZJ5l1Sj__O1DS7tCd9CQOGlRBVxG410gqBT0tHmscqdGyb9jVPEZIZ-YlBdULQF_geveJyP21vEEZOAvxMMVdAFAVVE")
+                .replace("MEDIA_ID", "K3jdIXujo7w1HaDJRXSVRE5DVGyPVCw1WKZ9cG7a2VOFf0BDlyX7Kluapj2Ua2co");
         ImageMessage imageMessage = new ImageMessage();
         imageMessage.setFromUserName(toUserName);
         imageMessage.setToUserName(fromUserName);
@@ -194,8 +194,8 @@ public class MessageUtil {
         imageMessage.setCreateTime(new Date().getTime() + "");
         imageMessage.setImage(img);
         message = imageMessageToXml(imageMessage);
-//        return message;
-        return WeiXinUtil.download(url);
+        return message;
+//        return WeiXinUtil.download(url);
     }
 
 
